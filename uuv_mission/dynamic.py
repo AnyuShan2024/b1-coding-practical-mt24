@@ -75,8 +75,19 @@ class Mission:
 
     @classmethod
     def from_csv(cls, file_name: str):
-        # You are required to implement this method
-        pass
+        # Build the file path relative to the current script
+        file_path = os.path.join(os.path.dirname(__file__), '..', 'data', file_name)
+        
+        # Load the CSV file into a pandas DataFrame
+        df = pd.read_csv(file_path)
+
+        # Extract columns and convert them to numpy arrays
+        reference = df['reference'].values
+        cave_height = df['cave_height'].values
+        cave_depth = df['cave_depth'].values
+
+        # Return an instance of Mission
+        return cls(reference, cave_height, cave_depth)
 
 
 class ClosedLoop:
