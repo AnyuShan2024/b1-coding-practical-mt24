@@ -2,3 +2,4 @@
 .vscode/
 __pycache__/
 venv/
+uuv_mission.egg-info/
