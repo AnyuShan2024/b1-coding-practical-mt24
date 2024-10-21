@@ -1,8 +1,10 @@
 # Practical Report: UUV Mission
 
+*Checkout the Github Repo Here*: [link](https://github.com/AnyuShan2024/b1-coding-practical-mt24)
+
 ## a) Background and Motivation
 
-The control system for the uncrewed underwater vehicle (UUV) is complete, including mission data input and the controller setup.
+The control system for the uncrewed underwater vehicle (UUV) is completed, including mission data input and the controller setup.
 
 ## b) Changes to Codebase
 
@@ -40,3 +42,9 @@ The class-based design with inheritance was chosen for:
 
 - **UUV Safety Feature**: The PD controller only follows the reference.
     - **Suggestion**: Clamp controller action near height or depth limits to prevent collisions.
+- **Limited DOF**: Only vertical motion is controlled.
+	- **Suggestion**: Implement a state-space approach to manage both depth and horizontal positioning.
+
+## Attachment: Screenshot of Simulation Result
+
+![alt text](image.png)
